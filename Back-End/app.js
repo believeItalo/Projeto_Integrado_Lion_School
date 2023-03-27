@@ -13,7 +13,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 const cursosLionSchool = require('./APIs_Lion_School/cursos')
-
+const alunosLionSchool = require('./APIs_Lion_School/alunos')
 app.use((request, response, next) => {
 
     response.header('Access-Control-Allow-Origin', '*')
@@ -33,6 +33,15 @@ app.get('/v1/lion-school/cursos', cors(), async function (request, response, nex
     response.status(200)
 
 })
+
+app.get('/v1/lion-school/alunos', cors(), async function(request,response,next){
+
+    let listaAlunos = alunosLionSchool.getAlunos()
+
+    response.json(listaAlunos)
+    response.status(200)
+})
+
 
 app.listen(8080, function () {
     console.log('Servidor aguardando requisições na porta 8080');
