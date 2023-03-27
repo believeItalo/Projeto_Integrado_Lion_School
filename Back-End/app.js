@@ -1,0 +1,39 @@
+/* 
+      Projeto: Construir API para a escola 'Lion School'
+      Autor: Ítalo Reis Rosa da Silva
+      Versão: 1.0
+      Data Início: 27/03/2023
+  */
+const express = require('express')
+
+const cors = require('cors')
+
+const bodyParser = require('body-parser')
+
+const app = express()
+
+const cursosLionSchool = require('./APIs_Lion_School/cursos')
+
+app.use((request, response, next) => {
+
+    response.header('Access-Control-Allow-Origin', '*')
+
+    response.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, OPTIONS')
+
+    app.use(cors())
+
+    next()
+})
+
+app.get('/v1/lion-school/cursos', cors(), async function (request, response, next){
+
+    let listaCursos = cursosLionSchool.getCursos()
+  
+    response.json(listaCursos)
+    response.status(200)
+
+})
+
+app.listen(8080, function () {
+    console.log('Servidor aguardando requisições na porta 8080');
+})
