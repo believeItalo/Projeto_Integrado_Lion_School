@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site dedicado ao gerenciamento de sistema escolar."/>
+    <meta name="description" content="Site dedicado ao gerenciamento do sistema escolar da Lion School." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="shortcut icon" type="imagem/x-icon" href="./img/logo-image.png" />
 
     <script src="https://kit.fontawesome.com/56adc94ecd.js" crossorigin="anonymous"></script>
@@ -25,27 +28,57 @@
 <body>
     <header>
         <div class="logo">
-            <img src="" alt="Logo Lion School">
-            <span></span>
+            <img src="./img/logo-image.png" alt="Logo Lion School">
+            <div class="name-school">
+                <span>Lion</span>
+                <span>School</span>
+            </div>
         </div>
 
-        <div class="sair">
-            <img src="" alt="">
-            <span>Sair</span>
+        <div class="out">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="out__text">Sair</span>
         </div>
     </header>
     <main>
         <div class="title">
-            <h1>Escolha um</h1>
-            <span>curso</span>
-            <h1>para gerenciar</h1>
+            <h1>
+                Escolha um
+                <span>curso</span>
+                para gerenciar
+            </h1>
         </div>
 
-        <img src="" alt="">
-        <img src="" alt="">
+        <img class="devices-image" src="./img/devices.png" alt="Devices">
+        <img class="student-image" src="./img/studant.png" alt="Student">
 
     </main>
     <footer>
+
+        <ul class="contact-container">
+            <li>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone contato-item__icon"></i>
+                    <span class="contact-item__text">(11) 4774-4700</span>
+                </div>
+            </li>
+            <li>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope" contato-item__icon></i>
+                    <span class="contact-item__text">lionschool@gmail.com</span>
+                </div>
+            </li>
+            <li>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot" contato-item__icon></i>
+                    <span class="contact-item__text">Rua tcc, 211, Centro, Jandira</span>
+                </div>
+            </li>
+        </ul>
+
+        <p>
+            Copyright © 2022 | Camila Pinheiro
+        </p>
 
         <ul class="social-container">
             <li class="social">
@@ -67,31 +100,6 @@
                 <a href="#" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-            </li>
-        </ul>
-
-        <p>
-            Copyright © 2022 | Fernando Leonid
-        </p>
-
-        <ul class="contact-container">
-            <li>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone contato-item__icon"></i>
-                    <span class="contact-item__text">(11) 4774-4700</span>
-                </div>
-            </li>
-            <li>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope" contato-item__icon></i>
-                    <span class="contact-item__text">lionschool@gmail.com</span>
-                </div>
-            </li>
-            <li>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot" contato-item__icon></i>
-                    <span class="contact-item__text">Rua tcc, 211, Centro, Jandira</span>
-                </div>
             </li>
         </ul>
 

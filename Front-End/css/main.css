@@ -1,0 +1,23 @@
+h1{
+    grid-area: title;
+    color: #353535;
+    font-size: 3.75rem;
+    font-weight: 300;
+}
+
+h1 span{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.devices-image{
+    grid-area: image1;
+}
+
+.student-image{
+    grid-area: image2;
+}
+
+.card {
+    grid-area: card;
+}
