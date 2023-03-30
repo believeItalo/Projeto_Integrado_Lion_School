@@ -42,7 +42,28 @@ app.get('/v1/lion-school/alunos', cors(), async function(request,response,next){
     response.status(200)
 })
 
+app.get('/v1/lion-school/alunos/:matricula',cors(), async function(request,response,next){
 
+    let numeroMatricula = request.params.matricula
+
+    let getAlunosPelaMAtricula = alunosLionSchool.getAlunoPelaMatricula(numeroMatricula)
+    response.json(getAlunosPelaMAtricula)
+    response.status(200)
+})
+
+app.get('/v1/lion-school/alunos/status/:stAlunos', cors(), async function(request,response,next){
+    let statusAluno = request.params.stAlunos
+    let getAlunoStatus = alunosLionSchool.getAlunosStatus(statusAluno)
+
+    if (getAlunoStatus) {
+        response.json(getAlunoStatus)
+        response.status(200)
+    }
+    else{
+        response.status(400)
+    }
+   
+})
 app.listen(8080, function () {
     console.log('Servidor aguardando requisições na porta 8080');
 })

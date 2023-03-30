@@ -1,3 +1,4 @@
+
 var cursos = [
     {
         "nome": "001 - Técnico em Desenvolvimento de Sistemas",
@@ -12,14 +13,15 @@ var cursos = [
         "carga": "1200"
     }
 ];
+/* 
+     Projeto: Construir API para a escola 'Lion School'
+     Autor: Ítalo Reis Rosa da Silva
+     Versão: 1.0
+     Data Início: 27/03/2023
+ */
+
+//Recupera uma lista de todos os cursos oferecidos pela escola.
 const getCursos = () => {
-    let jsonCursos = {}
-    cursos.forEach(function (dados) {
-        dados.nome
-        dados.sigla
-        dados.carga
-        dados.icone
-    })
     return { cursos }
 }
 

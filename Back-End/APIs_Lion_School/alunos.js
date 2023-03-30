@@ -1,3 +1,9 @@
+/*
+Projeto: Construir API para a escola 'Lion School'
+Autor: Ítalo Reis Rosa da Silva
+Versão: 1.0
+Data Início: 27/03/2023
+*/
 var alunos = [
 
     {
@@ -685,39 +691,62 @@ var alunos = [
         "status": "Cursando"
     }
 ];
-/*
-Projeto: Construir API para a escola 'Lion School'
-Autor: Ítalo Reis Rosa da Silva
-Versão: 1.0
-Data Início: 27/03/2023
-*/
 
+//Recupera uma lista de todos os alunos matriculados na escola.
 const getAlunos = () => {
 
     return { alunos }
 }
 
+//Recupera informações de um aluno específico com base no número de matrícula.
 const getAlunoPelaMatricula = (numeroMatricula) => {
     let jsonAlunoMatricula = {}
-   
+
     alunos.forEach(function (dados) {
-        if (numeroMatricula == dados.matricula) {
+        if (numeroMatricula === dados.matricula) {
             jsonAlunoMatricula.nome = dados.nome
             jsonAlunoMatricula.foto = dados.foto
             jsonAlunoMatricula.sexo = dados.sexo
             jsonAlunoMatricula.matricula = dados.matricula
             jsonAlunoMatricula.curso = dados.curso
         }
+
     })
-   
+
     return jsonAlunoMatricula
 
 }
-console.log(getAlunoPelaMatricula(20151001001));
 
-module.exports =
-{
-    getAlunos
+const getAlunoPeloCurso = (curso) => {
+    
 }
 
-  
+const getAlunosStatus = (status) => {
+    let jsonAlunos = {}
+    let cont = 0
+    let arrayAlunosStatus = []
+    alunos.forEach(function (dados) {
+        
+        if (status == dados.status) {
+            let jsonAlunoStatus = {}
+            jsonAlunoStatus.alunos = dados.nome
+            jsonAlunoStatus.nome = dados.nome
+            jsonAlunoStatus.foto = dados.foto
+            jsonAlunoStatus.sexo = dados.sexo
+            jsonAlunoStatus.matricula = dados.matricula
+            jsonAlunoStatus.status = dados.status
+            arrayAlunosStatus.push(jsonAlunoStatus)
+            jsonAlunos.alunos = arrayAlunosStatus
+        }
+    })
+    
+    return jsonAlunos
+}
+
+console.log(getAlunosStatus('Cursando'));
+module.exports =
+{
+    getAlunos,
+    getAlunoPelaMatricula,
+    getAlunosStatus
+}
