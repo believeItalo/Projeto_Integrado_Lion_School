@@ -17,17 +17,6 @@ header{
     align-items: center;
 }
 
-main{
-    grid-area: main;
-    padding: 98px 96px;
-    display: grid;
-    grid-template-columns: 40% 25% 35%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-     "title image2 card"
-     "image1 image2 card";
-}
-
 footer{
     grid-area: footer;
     width: 100%;
