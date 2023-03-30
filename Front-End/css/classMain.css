@@ -31,22 +31,17 @@ main h3{
 }
 
 .card-studying{
-    width: 201px;
-    height: 300px;
-    padding: 0 12px;
     background-color: var(--primary-color);
-    box-shadow: 5px 5px 12px #979696;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-finalized{
+    background-color: var(--status-finished-color);
+}
+
+.card {
     width: 201px;
     height: 300px;
     padding: 0 12px;
-    background-color: var(--status-finished-color);
     box-shadow: 5px 3px 12px #979696;
     display: flex;
     flex-direction: column;
