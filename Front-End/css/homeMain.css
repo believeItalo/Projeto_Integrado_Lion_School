@@ -1,0 +1,68 @@
+main{
+    grid-area: main;
+    padding: 98px 96px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 40% 25% 35%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+     "title image2 card"
+     "image1 image2 card";
+}
+
+.title{
+    max-width: 500px;
+}
+
+.title h1{
+    grid-area: title;
+    color: #353535;
+    font-size: 3.75rem;
+    font-weight: 300;
+}
+
+h1 span{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.devices-image{
+    grid-area: image1;
+}
+
+.student-image{
+    grid-area: image2;
+}
+
+
+#buttons-options{
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+button{
+    width: 400px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    box-shadow: 10px 10px 3px var(--filter-color);
+}
+
+.class i{
+    font-size: 4rem;
+}
+
+.name-class{
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}

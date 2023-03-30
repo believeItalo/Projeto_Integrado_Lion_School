@@ -1,0 +1,123 @@
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    padding: 35px 96px 0 96px;
+    color: var(--primary-color);
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+main h3{
+    font-size: 1.125rem;  
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 2px 8px #3b3b3b;
+    text-align: center;
+}
+
+#list-students{
+    padding: 49px 96px 114px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.card-studying{
+    background-color: var(--primary-color);
+}
+
+.card-finalized{
+    background-color: var(--status-finished-color);
+}
+
+.card {
+    width: 201px;
+    height: 300px;
+    padding: 0 12px;
+    box-shadow: 5px 3px 12px #979696;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters{
+    width: 100%;
+    height: 50px;
+    background-color: var(--filter-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 96px;
+}
+
+.legend{
+    width: auto;
+    display: flex;
+    align-items: center;
+  gap: 24px;
+}
+
+.legend span{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.legend-span{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content-finalized{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content-studying{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.box-finalized{
+    height:20px ;
+    width: 20px;
+    background-color: var(--status-finished-color) ;
+    box-shadow: 5px 3px 12px #979696;
+}
+
+.box-studying{
+    height:20px ;
+    width: 20px;
+    background-color: var(--primary-color) ;
+    box-shadow: 5px 3px 12px #979696;
+}
+
+option{
+    background-color: var(--primary-color);
+}
+
+select{
+    background-color: var(--filter-color);
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.image-student{
+    width: 200px;
+    height: 200px;
+}
+

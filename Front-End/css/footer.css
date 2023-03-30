@@ -1,0 +1,44 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-item i{
+    font-size: 1.5rem;
+    width: 24px;
+}
+
+.contact-item span{
+    padding-left: 24px;
+}
+
+.contact-item__text{
+    font-size: 1rem;
+}
+
+footer p{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.social-container{
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.social{
+    margin: 10px;
+    height: 48px;
+    width: 48px;
+    border-radius: 200px;
+    border: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a i{
+    font-size: 1.5rem;
+}

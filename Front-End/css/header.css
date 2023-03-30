@@ -1,0 +1,30 @@
+header i {
+    font-size: 1.5rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.name-school{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.out a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.out__text{
+    font-size: 2rem;
+    font-weight: 500;
+}
