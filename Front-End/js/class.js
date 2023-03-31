@@ -48,22 +48,24 @@ const clearListStudents = () => {
 }
 
 const statusSelect = document.getElementById(`select`)
-<<<<<<< HEAD
+
 statusSelect.addEventListener('change', async (el) => {
     const status = statusSelect.value
     const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
 
     if (status == 'status') {
-=======
-statusSelect.addEventListener(`change`, (el) => {
-    const status = statusSelect.value
-    const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
-
-    if (status == `status`) {
->>>>>>> ee1191ae03aa51768b917ee65a6223f8e356d8bf
         location.reload()
+
+
+    
     }
     clearListStudents()
     criarCard(studentsFilter)
 })
 /// teste
+
+// statusSelect.addEventListener(`change`, (el) => {
+//     const status = statusSelect.value
+//     const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
+
+    // if (status == `status`) {
