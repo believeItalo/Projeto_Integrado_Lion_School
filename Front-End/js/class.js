@@ -1,11 +1,12 @@
 'use strict'
 
-import { alunos } from "../js/alunos.js"
-
+const courseInitial = localStorage.getItem(`course`)
 
 const criarCard = (student) => {
     const card = document.createElement('li')
-    if (student.status == "Cursando"){
+    card.classList.add('card')
+    card.id = 'card'
+    if (student.status == "Cursando") {
         card.classList.add('card-studying')
     } else {
         card.classList.add('card-finalized')
@@ -18,17 +19,39 @@ const criarCard = (student) => {
     const name = document.createElement('h3')
     name.textContent = student.nome
 
-
     card.append(img, name)
 
     return card
 }
 
-const carregarAlunos = () => {
+const carregarAlunos = async () => {
+    const url = `http://localhost:8080/v1/lion-school/alunos`
+
+    const response = await fetch(url)
+    const data = await response.json()
+    let teste = data.alunos
+
     const container = document.getElementById('list-students')
-    const cards = alunos.map(criarCard)
+    const cards = teste.map(criarCard)
 
     container.replaceChildren(...cards)
 }
 
-carregarAlunos() 
+carregarAlunos()
+
+const clearListStudents = () => {
+    const cards = document.getElementById('card')
+    cards.forEach((card) => card.remove())
+}
+
+const statusSelect = document.getElementById(`select`)
+statusSelect.addEventListener('change', async (el) => {
+    const status = statusSelect.value
+    const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
+
+    if (status == 'status') {
+        location.reload()
+    }
+    clearListStudents()
+    criarCard(studentsFilter)
+})
