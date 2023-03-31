@@ -1,11 +1,10 @@
 'use strict'
 
-<<<<<<< HEAD
-const courseInitial = localStorage.getItem(`course`)
+// const courseInitial = localStorage.getItem(`course`)
 
-=======
->>>>>>> ee1191ae03aa51768b917ee65a6223f8e356d8bf
+
 const criarCard = (student) => {
+   
     const card = document.createElement('li')
     card.classList.add('card')
     card.id = 'card'
@@ -27,42 +26,52 @@ const criarCard = (student) => {
     return card
 }
 
-const carregarAlunos = async () => {
-    const url = `http://localhost:8080/v1/lion-school/alunos`
+export const carregarAlunos = async (sigla) => {
+    const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${sigla}`
 
     const response = await fetch(url)
     const data = await response.json()
-    let teste = data.alunos
+    let teste = data.curso
 
+    console.log(sigla);
+    
     const container = document.getElementById('list-students')
     const cards = teste.map(criarCard)
 
     container.replaceChildren(...cards)
+
+
+   
 }
 
-carregarAlunos()
+carregarAlunos('rds')
 
-const clearListStudents = () => {
-    const cards = document.getElementById('card')
-    cards.forEach((card) => card.remove())
-}
 
-const statusSelect = document.getElementById(`select`)
+// let guardar = carregarAlgumaCoisa()
+// carregarAlunos(guardar)
 
-statusSelect.addEventListener('change', async (el) => {
-    const status = statusSelect.value
-    const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
 
-    if (status == 'status') {
-        location.reload()
+// const clearListStudents = () => {
+//     const cards = document.getElementById('card')
+//     cards.forEach((card) => card.remove())
+// }
+
+// const statusSelect = document.getElementById(`select`)
+
+// statusSelect.addEventListener('change', async (el) => {
+//     const status = statusSelect.value
+//     const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
+
+//     if (status == 'status') {
+//         location.reload()
 
 
     
-    }
-    clearListStudents()
-    criarCard(studentsFilter)
-})
-/// teste
+//     }
+//     clearListStudents()
+//     criarCard(studentsFilter)
+// })
+
 
 // statusSelect.addEventListener(`change`, (el) => {
 //     const status = statusSelect.value
