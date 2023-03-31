@@ -691,17 +691,15 @@ var alunos = [
         "status": "Cursando"
     }
 ];
-
 //Recupera uma lista de todos os alunos matriculados na escola.
 const getAlunos = () => {
 
     return { alunos }
 }
-
 //Recupera informações de um aluno específico com base no número de matrícula.
 const getAlunoPelaMatricula = (numeroMatricula) => {
     let jsonAlunoMatricula = {}
-
+    let status = false
     alunos.forEach(function (dados) {
         if (numeroMatricula === dados.matricula) {
             jsonAlunoMatricula.nome = dados.nome
@@ -709,25 +707,46 @@ const getAlunoPelaMatricula = (numeroMatricula) => {
             jsonAlunoMatricula.sexo = dados.sexo
             jsonAlunoMatricula.matricula = dados.matricula
             jsonAlunoMatricula.curso = dados.curso
+            status = true
         }
-
     })
+    if (status) {
+        return jsonAlunoMatricula
+    }
+    else return status
 
-    return jsonAlunoMatricula
+
 
 }
+//Recupera uma lista de todos os alunos matriculados no curso especificado.
+const getAlunosCurso = (curso) => {
+    let jsonAlunosCursos = {}
+    let arrayAlunosCursos = []
+    let status = false
+    alunos.forEach(function(aluno){
+        if(aluno.curso[0].sigla == curso.toUpperCase()){
+            arrayAlunosCursos.push(aluno)
+            status = true
+        }
+    })
+    jsonAlunosCursos.curso = arrayAlunosCursos
 
-const getAlunoPeloCurso = (curso) => {
-    
+    if(status){
+       return jsonAlunosCursos
+    }else{
+        return status
+    }
 }
-
+//Recupera uma lista de todos os alunos com o status especificado.
 const getAlunosStatus = (status) => {
     let jsonAlunos = {}
-    let cont = 0
     let arrayAlunosStatus = []
+    let statusTF = false
+    
+    let formatacaostatus = status[0].toUpperCase() + status.substring(1).toLowerCase()
     alunos.forEach(function (dados) {
-        
-        if (status == dados.status) {
+
+        if (formatacaostatus == dados.status) {
             let jsonAlunoStatus = {}
             jsonAlunoStatus.alunos = dados.nome
             jsonAlunoStatus.nome = dados.nome
@@ -737,16 +756,19 @@ const getAlunosStatus = (status) => {
             jsonAlunoStatus.status = dados.status
             arrayAlunosStatus.push(jsonAlunoStatus)
             jsonAlunos.alunos = arrayAlunosStatus
+            statusTF = true
         }
     })
-    
-    return jsonAlunos
-}
+    if (statusTF) {
+        return jsonAlunos
+    }
+    else return statusTF
 
-console.log(getAlunosStatus('Cursando'));
+}
 module.exports =
 {
     getAlunos,
     getAlunoPelaMatricula,
-    getAlunosStatus
+    getAlunosStatus,
+    getAlunosCurso
 }

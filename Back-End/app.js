@@ -25,16 +25,19 @@ app.use((request, response, next) => {
     next()
 })
 
-app.get('/v1/lion-school/cursos', cors(), async function (request, response, next){
+app.get('/v1/lion-school/cursos', cors(), async function (request, response, next) {
 
     let listaCursos = cursosLionSchool.getCursos()
-  
+
+
     response.json(listaCursos)
     response.status(200)
 
+
+
 })
 
-app.get('/v1/lion-school/alunos', cors(), async function(request,response,next){
+app.get('/v1/lion-school/alunos', cors(), async function (request, response, next) {
 
     let listaAlunos = alunosLionSchool.getAlunos()
 
@@ -42,27 +45,58 @@ app.get('/v1/lion-school/alunos', cors(), async function(request,response,next){
     response.status(200)
 })
 
-app.get('/v1/lion-school/alunos/:matricula',cors(), async function(request,response,next){
+app.get('/v1/lion-school/alunos/:matricula', cors(), async function (request, response, next) {
 
     let numeroMatricula = request.params.matricula
 
     let getAlunosPelaMAtricula = alunosLionSchool.getAlunoPelaMatricula(numeroMatricula)
-    response.json(getAlunosPelaMAtricula)
-    response.status(200)
+
+    if (getAlunosPelaMAtricula == undefined || getAlunosPelaMAtricula == ' ') {
+        response.status(400)
+        response.json('Erro, matricula não indentificada')
+    }
+    else {
+        response.json(getAlunosPelaMAtricula)
+        response.status(200)
+    }
+
 })
 
-app.get('/v1/lion-school/alunos/status/:stAlunos', cors(), async function(request,response,next){
+app.get('/v1/lion-school/alunos/cursos/:siglacurso', cors(), async function (request, response, next) {
+
+    let curso = request.params.siglacurso
+
+    let getAlunosPeloCurso = alunosLionSchool.getAlunosCurso(curso)
+
+    if (getAlunosPeloCurso == undefined || getAlunosPeloCurso == ' ' || getAlunosPeloCurso == null) {
+        response.status(404)
+        response.json('Erro, sigla não identificada')
+    }
+    else if (getAlunosPeloCurso == Number) {
+        response.st
+    }
+    else {
+        response.json(getAlunosPeloCurso)
+        response.status(200)
+    }
+
+})
+
+
+app.get('/v1/lion-school/alunos/status/:stAlunos', cors(), async function (request, response, next) {
     let statusAluno = request.params.stAlunos
     let getAlunoStatus = alunosLionSchool.getAlunosStatus(statusAluno)
 
-    if (getAlunoStatus) {
+    if (getAlunoStatus == null || getAlunoStatus == ' ' || getAlunoStatus == undefined) {
+        response.json('Erro, status não indentificado')
+        response.status(404)
+    }
+    else {
         response.json(getAlunoStatus)
         response.status(200)
     }
-    else{
-        response.status(400)
-    }
-   
+
+
 })
 app.listen(8080, function () {
     console.log('Servidor aguardando requisições na porta 8080');
