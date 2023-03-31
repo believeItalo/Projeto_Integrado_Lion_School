@@ -1,5 +1,9 @@
 'use strict'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ee1191ae03aa51768b917ee65a6223f8e356d8bf
 const criarCard = (curso) => {
     
 
