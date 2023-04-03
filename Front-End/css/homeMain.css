@@ -28,6 +28,7 @@ h1 span{
 
 .devices-image{
     grid-area: image1;
+    /* width: 22vw; */
 }
 
 .student-image{
@@ -44,7 +45,7 @@ h1 span{
 }
 
 button{
-    width: 400px;
+    width: 23vw;
     height: 200px;
     background-color: var(--primary-color);
     border: none;
@@ -66,4 +67,32 @@ button{
     font-size: 4rem;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.image-icon{
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 1395px){
+    main {
+        grid-template-columns: 35% 25% 40%;
+    }
+
+    /* .title{
+        max-width: px;
+    } */
+    
+    .title h1{
+
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .devices-image{
+
+        width: 23vw;
+    }
+
+
 }

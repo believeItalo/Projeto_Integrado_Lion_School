@@ -1,10 +1,9 @@
 'use strict'
 
-// const courseInitial = localStorage.getItem(`course`)
-
-
 const criarCard = (student) => {
-   
+    const a = document.createElement('a')
+    a.href = '../html/student.html'
+
     const card = document.createElement('li')
     card.classList.add('card')
     card.id = 'card'
@@ -21,60 +20,26 @@ const criarCard = (student) => {
     const name = document.createElement('h3')
     name.textContent = student.nome
 
+    a.append(card)
     card.append(img, name)
 
-    return card
+    return a
 }
 
-export const carregarAlunos = async (sigla) => {
-    const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${sigla}`
+export const carregarAlunos = async () => {
+    let localStore = localStorage.getItem('acronym')
+    const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${localStore}`
 
     const response = await fetch(url)
     const data = await response.json()
-    let teste = data.curso
+    let list = data.curso
 
-    console.log(sigla);
-    
     const container = document.getElementById('list-students')
-    const cards = teste.map(criarCard)
+    const cards = list.map(criarCard)
 
     container.replaceChildren(...cards)
-
-
-   
 }
 
-carregarAlunos('rds')
+carregarAlunos()
 
 
-// let guardar = carregarAlgumaCoisa()
-// carregarAlunos(guardar)
-
-
-// const clearListStudents = () => {
-//     const cards = document.getElementById('card')
-//     cards.forEach((card) => card.remove())
-// }
-
-// const statusSelect = document.getElementById(`select`)
-
-// statusSelect.addEventListener('change', async (el) => {
-//     const status = statusSelect.value
-//     const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
-
-//     if (status == 'status') {
-//         location.reload()
-
-
-    
-//     }
-//     clearListStudents()
-//     criarCard(studentsFilter)
-// })
-
-
-// statusSelect.addEventListener(`change`, (el) => {
-//     const status = statusSelect.value
-//     const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
-
-    // if (status == `status`) {
