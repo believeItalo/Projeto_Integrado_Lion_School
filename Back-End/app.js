@@ -29,7 +29,6 @@ app.get('/v1/lion-school/cursos', cors(), async function (request, response, nex
 
     let listaCursos = cursosLionSchool.getCursos()
 
-
     response.json(listaCursos)
     response.status(200)
 
