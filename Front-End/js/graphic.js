@@ -55,10 +55,10 @@ const loadDiscipline = async () => {
 
   console.log(displines);
 
-  const container = document.getElementById("#main");
+//   const container = document.querySelector("#main");
   const progress = displines.map(graphicStudent);
 
-  container.replaceChildren(...progress);
+//   container.replaceChildren(...progress);
 };
 
 loadDiscipline();
