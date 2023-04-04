@@ -1,45 +1,58 @@
-'use strict'
+"use strict";
+
+const nameCourse = async function () {
+  let title = localStorage.getItem("nameCourse");
+  const regexpNumber = /[0-9]/g;
+  title = title.replace(regexpNumber, "").replace("-", "").trim();
+  let titleCourse = document.querySelector(".title-class");
+  titleCourse.innerHTML = title;
+};
 
 const criarCard = (student) => {
-    const a = document.createElement('a')
-    a.href = '../html/student.html'
+  nameCourse();
 
-    const card = document.createElement('li')
-    card.classList.add('card')
-    card.id = 'card'
-    if (student.status == "Cursando") {
-        card.classList.add('card-studying')
-    } else {
-        card.classList.add('card-finalized')
-    }
+  const a = document.createElement("a");
+  a.href = "../html/student.html";
 
-    const img = document.createElement('img')
-    img.classList.add('image-student')
-    img.src = student.foto
+  const card = document.createElement("li");
+  card.classList.add("card");
+  card.id = student.matricula;
+  card.onclick = () => {
+    localStorage.setItem("registration", card.id);
+  };
 
-    const name = document.createElement('h3')
-    name.textContent = student.nome
+  if (student.status == "Cursando") {
+    card.classList.add("card-studying");
+  } else {
+    card.classList.add("card-finalized");
+  }
 
-    a.append(card)
-    card.append(img, name)
+  const img = document.createElement("img");
+  img.classList.add("image-student");
+  img.src = student.foto;
 
-    return a
-}
+  const name = document.createElement("h3");
+  name.textContent = student.nome;
+
+  a.append(card);
+  card.append(img, name);
+
+  return a;
+};
 
 export const carregarAlunos = async () => {
-    let localStore = localStorage.getItem('acronym')
-    const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${localStore}`
+  let localStore = localStorage.getItem("acronym");
+  const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${localStore}`;
 
-    const response = await fetch(url)
-    const data = await response.json()
-    let list = data.curso
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  let list = data.curso;
 
-    const container = document.getElementById('list-students')
-    const cards = list.map(criarCard)
+  const container = document.getElementById("list-students");
+  const cards = list.map(criarCard);
 
-    container.replaceChildren(...cards)
-}
+  container.replaceChildren(...cards);
+};
 
-carregarAlunos()
-
-
+carregarAlunos();
