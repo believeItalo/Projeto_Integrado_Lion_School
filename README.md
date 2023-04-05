@@ -1,4 +1,7 @@
-## **PROJETO INTEGRADO LION SCHOOL**
+<div> 
+<img  src="./Front-End/img/logo-image.png" align="left" width="33" align="center"/>
+<h1><strong>PROJETO INTEGRADO - LION SCHOOL</strong></h1>
+</div>
 
 |      MOBILE         |          DESKTOP       |
 |:-------------------:|:-----------------------:
@@ -31,7 +34,7 @@ O Lighthouse é uma ferramenta automatizada que aprimora a qualidade dos apps da
 Utilizando a ferramenta de design Figma, planejamos o breakpoint para smartphones. 
 Segue o link: 
 
-[Link do Figma](https://www.figma.com/file/zecahYY0iLXROChUJgE7iI/PROJETO-INTEGRADO---LION-SCHOOL?node-id=0-1&t=3UjtougSLWNMPcEP-0)
+- [Link do Figma](https://www.figma.com/file/zecahYY0iLXROChUJgE7iI/PROJETO-INTEGRADO---LION-SCHOOL?node-id=0-1&t=3UjtougSLWNMPcEP-0)
 
 ## **Critérios** 
 - [x] Criou layout conforme designer feito no Figma?
@@ -51,3 +54,4 @@ Segue o link:
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: |
 | <a href="https://github.com/camilapinh3iro"><img src="https://img.shields.io/badge/DESENVOLVEDORA-CAMILA%20PINHEIRO-informational?style=for-the-badge&logo=appveyorlabelColor=222222"></a> |   <a href="https://github.com/camilapinh3iro"><img src="https://skillicons.dev/icons?i=github&theme="/></a>   | <img src="https://avatars.githubusercontent.com/u/110388965?v=4" height="50"></a> |
 | <a href="https://github.com/believeItalo"><img src="https://img.shields.io/badge/DESENVOLVEDOR-ÍTALO%20REIS-informational?style=for-the-badge&logo=appveyorlabelColor=FF00FF"></a> | <a href="https://github.com/believeItalo"><img src="https://skillicons.dev/icons?i=github&theme=dark"/></a> | <img src="https://avatars.githubusercontent.com/u/93750672?v=4" height="50"></a> |
+
