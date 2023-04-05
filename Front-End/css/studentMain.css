@@ -31,7 +31,7 @@ article{
     height: 400px;
 }
 
-.grafic {
+.graphic {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@ article{
     box-shadow: 1px 1px 12px #bebebe;
 }
 
-#grafic-student {
+#graphic-student {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,25 +60,24 @@ article{
     gap: 20px;
     width: 355px;
 }
+
 .spans_bar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 18px;
     gap: 38px;
     width: 355px;
+    font-weight: 700;
+    text-shadow: 1px 2px 8px #888888
 }
 
 .progress_bar {
     display: block;
     appearance: none;
     width: 300px;
-}
-
-.progress_barAzul {
-    display: block;
-    appearance: none;
+ 
 }
 
 .progress_bar::-webkit-progress-bar {
@@ -86,15 +85,21 @@ article{
 }
 
 .progress_barRed::-webkit-progress-value {
-    background-color: red;
+    background-color: #C11010;
+    box-shadow: 1px 0px 20px #C11010;
+    border-radius: 0 4px 4px 0;
 }
 
 .progress_barBlue::-webkit-progress-value {
-    background-color: blue;
+    background-color: var(--primary-color);
+    box-shadow: 1px 0px 20px var(--primary-color);
+    border-radius: 0 4px 4px 0;
 }
 
 .progress_barYellow::-webkit-progress-value {
-    background-color: yellow;
+    background-color: #E5B657;
+    box-shadow: 1px 0px 20px #E5B657;
+    border-radius: 0 4px 4px 0;
 }
 
 /*PARA SPANS*/
@@ -109,3 +114,13 @@ article{
 .color-yellow{
     color: #E5B657;
 }
+
+/* .teste-grafico{
+    display: flex;
+    height: auto;
+    gap: 16px;
+}
+
+.rotate{
+    rotate: 90deg;
+} */
