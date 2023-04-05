@@ -47,10 +47,4 @@ footer p{
 
 .social:hover {
     transform: scale(1.1);
-    /* background-color: #fff; */
-    
 }
-/* 
-.social, a, i:hover{
-    color: var(--primary-color);
-} */

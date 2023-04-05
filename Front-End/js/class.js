@@ -12,7 +12,7 @@ const criarCard = (student) => {
   nameCourse();
 
   const a = document.createElement("a");
-  a.href = "../html/student.html";
+  a.href = "student.html";
 
   const card = document.createElement("li");
   card.classList.add("card");

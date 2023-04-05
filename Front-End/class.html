@@ -15,19 +15,19 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/colors.css" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/homeMain.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/classMain.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link
       rel="shortcut icon"
       type="imagem/x-icon"
-      href="../img/logo-image.png"
+      href="./img/logo-image.png"
     />
 
-    <script src="../js/home.js" defer type="module"></script>
+    <script src="./js/class.js" defer type="module"></script>
     <script
       src="https://kit.fontawesome.com/56adc94ecd.js"
       crossorigin="anonymous"
@@ -39,7 +39,7 @@
   <body>
     <header>
       <div class="logo">
-        <img src="../img/logo-image.png" alt="Logo Lion School" />
+        <img src="./img/logo-image.png" alt="Logo Lion School" />
         <div class="name-school">
           <span>Lion</span>
           <span>School</span>
@@ -47,35 +47,62 @@
       </div>
 
       <div class="out">
-        <a href="#">
+        <a href="./home.html">
           <i class="fas fa-sign-out-alt"></i>
-          <span class="out__text">Sair</span>
+          <span class="out__text">Voltar</span>
         </a>
       </div>
     </header>
+
     <main>
-      <div class="title">
-        <h1>
-          Escolha um
-          <span>curso</span>
-          para gerenciar
-        </h1>
+      <div class="filters">
+        <div id="select">
+          <select id="select-status">
+            <option value="status">Status</option>
+            <option value="finalized">Finalizado</option>
+            <option value="studying">Cursando</option>
+          </select>
+
+          <select id="select-year">
+            <option selected disabled>Ano</option>
+            <option>2018</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+          </select>
+        </div>
+
+        <div class="legend">
+          <span class="legend-span">Legenda</span>
+
+          <div class="content-finalized">
+            <div class="box-finalized"></div>
+            <span>Cursando</span>
+          </div>
+
+          <div class="content-studying">
+            <div class="box-studying"></div>
+            <span>Finalizado</span>
+          </div>
+        </div>
       </div>
 
-      <img class="devices-image" src="../img/devices.png" alt="Devices" />
-      <img class="student-image" src="../img/studant.png" alt="Student" />
+      <h1 class="title-class"></h1>
 
-      <div id="buttons-options">
-        <!-- <button class="class">
-                <i class="fas fa-laptop-code"></i>
-                <h2 class="name-class">Ds</h2>
-            </button>
-            <button class="class">
-                <i class="fas fa-network-wired"></i>
-                <h2 class="name-class">Redes</h2>
-            </button> -->
-      </div>
+      <ul id="list-students">
+        <!-- <li class="card-studying">
+                <img src="./img/student-image.png" alt="Image Student">
+                <h3>HÉLIDA BENTO DE OLIVEIRA LINS</h3>
+            </li>
+            <li class="card-finalized">
+                <img src="./img/student-image.png" alt="Image Student">
+                <h3>JOSÉ MATHEUS DA SILVA MIRANDA</h3>
+            </li> -->
+      </ul>
     </main>
+
     <footer>
       <ul class="contact-container">
         <li>
@@ -100,7 +127,7 @@
         </li>
       </ul>
 
-      <p>Copyright © 2022 | Camila Pinheiro & Ítalo Reis</p>
+      <p>Copyright © 2023 | Camila Pinheiro & Ítalo Reis</p>
 
       <ul class="social-container">
         <li class="social">

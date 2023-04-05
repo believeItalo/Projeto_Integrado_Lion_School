@@ -2,7 +2,7 @@
 
 const criarCard = (curso) => {
   const a = document.createElement("a");
-  a.href = "../html/class.html";
+  a.href = "class.html";
 
   const card = document.createElement("button");
   card.classList.add("class");
@@ -15,6 +15,7 @@ const criarCard = (curso) => {
   const icon = document.createElement("img");
   icon.classList.add("image-icon");
   icon.src = curso.icone;
+  icon.alt = "Icon about course"
 
   const name = document.createElement("h2");
   name.classList.add("name-class");
