@@ -6,7 +6,7 @@
 |      MOBILE         |          DESKTOP       |
 |:-------------------:|:-----------------------:
 |![](./Front-End/img/screenshot-mobile.png)|![](./Front-End/img/screenshot-desktop.png)|
-|                     |                        |
+
 
 [Clique aqui]() para acessar o site. 
 
