@@ -23,6 +23,7 @@ const graphicStudent = (dados) => {
     const spanDisciplines = document.createElement("span");
     spanDisciplines.classList.add("rotate");
     spanDisciplines.classList.add("span-bar");
+    spanDisciplines.classList.add("color-blue");
 
      const textSplit = dados.disciplinas[index].nome.split(" ");
      if (textSplit.length == 2) {
@@ -46,15 +47,15 @@ const graphicStudent = (dados) => {
     if (bar.value > 50) {
       bar.classList.add("progress-bar-blue");
       span.classList.add("color-blue");
-      spanDisciplines.classList.add("color-blue");
+     
     } else if (bar.value == 50) {
       bar.classList.add("progress-bar-yellow");
       span.classList.add("color-yellow");
-      spanDisciplines.classList.add("color-yellow");
+  
     } else if (bar.value < 50) {
       bar.classList.add("progress-bar-red");
       span.classList.add("color-red");
-      spanDisciplines.classList.add("color-red");
+    
     }
 
     contentBars.append(spanDisciplines, bar, span);
