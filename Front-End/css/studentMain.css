@@ -4,7 +4,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 49px;
+
 }
 
 main h3{
@@ -35,18 +35,18 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 500px;
-    height: 500px;
-    gap: 20px;
+    width: auto;
+    height: auto;
     box-shadow: 1px 1px 12px #bebebe;
+    padding: 71px;
+    rotate: -90deg;
 }
 
 #graphic-student {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    rotate: -90deg;
+    /* align-items: center; */
+    /* rotate: -90deg; */
     justify-content: center;
     gap: 40px;
 
@@ -62,21 +62,18 @@ article{
 }
 
 .span-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     font-size: 18px;
     gap: 38px;
-    width: 355px;
     font-weight: 700;
-    text-shadow: 1px 2px 8px #888888
+    text-shadow: 1px 2px 8px #888888;
+    width: 24px;
 }
 
 .progress-bar {
     display: block;
     appearance: none;
     width: 300px;
+    
  
 }
 
@@ -114,12 +111,15 @@ article{
     color: #E5B657;
 }
 
-/* .teste-grafico{
+.teste-grafico{
     display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
     height: auto;
     gap: 16px;
 }
 
 .rotate{
     rotate: 90deg;
-} */
+}
