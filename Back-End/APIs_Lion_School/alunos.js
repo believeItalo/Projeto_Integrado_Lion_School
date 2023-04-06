@@ -707,7 +707,6 @@ const getAlunoPelaMatricula = (numeroMatricula) => {
             jsonAlunoMatricula.sexo = dados.sexo
             jsonAlunoMatricula.matricula = dados.matricula
             jsonAlunoMatricula.curso = dados.curso
-            jsonAlunoMatricula.siglaCurso = dados.curso
             status = true
         }
     })
@@ -715,10 +714,8 @@ const getAlunoPelaMatricula = (numeroMatricula) => {
         return jsonAlunoMatricula
     }
     else return status
-
-
-
 }
+
 //Recupera uma lista de todos os alunos matriculados no curso especificado.
 const getAlunosCurso = (curso) => {
     let jsonAlunosCursos = {}
