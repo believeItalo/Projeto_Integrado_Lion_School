@@ -3,14 +3,12 @@
 const graphicStudent = (dados) => {
   const contentAll = document.querySelector(".graphic");
 
-  const contentBars = document.querySelector("#graphic-student");
-
-  const contentSpanValue = document.querySelector(".disciplines-span");
-
-  const contentSpanDiscipline = document.querySelector(".span-bar");
+  const contentProgress = document.querySelector("#graphic-student");
 
   for (let index = 0; index < dados.disciplinas.length; index++) {
 
+    const contentBars = document.createElement('div')
+    contentBars.classList.add('teste-grafico')
 
     const bar = document.createElement("progress");
     bar.classList.add("progress-bar");
@@ -19,12 +17,12 @@ const graphicStudent = (dados) => {
 
     const span = document.createElement("span");
     span.classList.add("span-bar");
+    span.classList.add("rotate");
     span.innerHTML = dados.disciplinas[index].media;
 
     const spanDisciplines = document.createElement("span");
-    // const textSplit = dados.disciplinas[index].nome.split(" ", 3);
-    // const textSlice = textSplit[0].slice(0,2) + textSplit[1].slice(0,2) +  textSplit[2].slice(0.2)
-    // spanDisciplines.innerHTML = textSplit
+    spanDisciplines.classList.add("rotate");
+    spanDisciplines.classList.add("span-bar");
 
      const textSplit = dados.disciplinas[index].nome.split(" ");
      if (textSplit.length == 2) {
@@ -44,10 +42,6 @@ const graphicStudent = (dados) => {
       spanDisciplines.innerHTML = textSlice
      }
     
-    
-   
-    // let divisao = teste.split(" ", 3)
-    // console.log(divisao[0].slice(0 , 2).toUpperCase() + divisao[2].slice(0,2).toUpperCase());
 
     if (bar.value > 50) {
       bar.classList.add("progress-bar-blue");
@@ -63,12 +57,12 @@ const graphicStudent = (dados) => {
       spanDisciplines.classList.add("color-red");
     }
 
-    contentBars.append(bar);
-    contentSpanValue.append(span);
-    contentSpanDiscipline.append(spanDisciplines);
+    contentBars.append(spanDisciplines, bar, span);
+    contentProgress.append(contentBars)
   }
 
-  contentAll.append(contentBars, contentSpanValue, contentSpanDiscipline);
+  
+  contentAll.append(contentProgress);
 
   return contentAll;
 };
