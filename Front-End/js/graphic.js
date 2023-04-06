@@ -44,7 +44,7 @@ const graphicStudent = (dados) => {
     contentSpanDiscipline.append(spanDisciplines);
   }
 
-  contentAll.append(contentBars, contentSpanValue, contentSpanDiscipline);
+  contentAll.append( contentSpanValue, contentBars, contentSpanDiscipline);
 
   return contentAll;
 };
