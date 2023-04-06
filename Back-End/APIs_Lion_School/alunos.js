@@ -715,23 +715,22 @@ const getAlunoPelaMatricula = (numeroMatricula) => {
     }
     else return status
 }
-
 //Recupera uma lista de todos os alunos matriculados no curso especificado.
 const getAlunosCurso = (curso) => {
     let jsonAlunosCursos = {}
     let arrayAlunosCursos = []
     let status = false
-    alunos.forEach(function(aluno){
-        if(aluno.curso[0].sigla == curso.toUpperCase()){
+    alunos.forEach(function (aluno) {
+        if (aluno.curso[0].sigla == curso.toUpperCase()) {
             arrayAlunosCursos.push(aluno)
             status = true
         }
     })
     jsonAlunosCursos.curso = arrayAlunosCursos
 
-    if(status){
-       return jsonAlunosCursos
-    }else{
+    if (status) {
+        return jsonAlunosCursos
+    } else {
         return status
     }
 }
@@ -740,7 +739,7 @@ const getAlunosStatus = (status) => {
     let jsonAlunos = {}
     let arrayAlunosStatus = []
     let statusTF = false
-    
+
     let formatacaostatus = status[0].toUpperCase() + status.substring(1).toLowerCase()
     alunos.forEach(function (dados) {
 
@@ -763,6 +762,24 @@ const getAlunosStatus = (status) => {
     else return statusTF
 
 }
+const getAlunoPeloAno = (ano) => {
+
+    let teste = alunos.forEach(function (dados) {
+      return dados.nome
+
+    })
+    alunos.forEach(function (dados) {
+        dados.curso.forEach(function (dados) {
+            if (ano == dados.conclusao) {
+                console.log(teste);
+            }
+        })
+    })
+
+
+}
+
+console.log(getAlunoPeloAno('2020'));
 module.exports =
 {
     getAlunos,
