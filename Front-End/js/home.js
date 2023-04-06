@@ -1,6 +1,6 @@
 "use strict";
 
-const criarCard = (curso) => {
+const createButtonCourse = (curso) => {
   const a = document.createElement("a");
   a.href = "class.html";
 
@@ -15,7 +15,7 @@ const criarCard = (curso) => {
   const icon = document.createElement("img");
   icon.classList.add("image-icon");
   icon.src = curso.icone;
-  icon.alt = "Icon about course"
+  icon.alt = "Icon about course";
 
   const name = document.createElement("h2");
   name.classList.add("name-class");
@@ -27,7 +27,7 @@ const criarCard = (curso) => {
   return a;
 };
 
-const carregarCursos = async () => {
+const loadCourses = async () => {
   const url = `http://localhost:8080/v1/lion-school/cursos`;
 
   const response = await fetch(url);
@@ -36,11 +36,11 @@ const carregarCursos = async () => {
   let courses = data.cursos;
 
   const container = document.getElementById("buttons-options");
-  const cards = courses.map(criarCard);
+  const cards = courses.map(createButtonCourse);
 
   container.replaceChildren(...cards);
 };
 
-carregarCursos();
+loadCourses();
 
 

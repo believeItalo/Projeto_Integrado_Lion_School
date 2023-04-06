@@ -51,7 +51,7 @@ article{
     gap: 40px;
 
 }
-.materiasSpan{
+.disciplines-span{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,7 +61,7 @@ article{
     width: 355px;
 }
 
-.spans_bar {
+.span-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,36 +73,35 @@ article{
     text-shadow: 1px 2px 8px #888888
 }
 
-.progress_bar {
+.progress-bar {
     display: block;
     appearance: none;
     width: 300px;
  
 }
 
-.progress_bar::-webkit-progress-bar {
+.progress-bar::-webkit-progress-bar {
     background-color: #EEEFF8;;
 }
 
-.progress_barRed::-webkit-progress-value {
+.progress-bar-red::-webkit-progress-value {
     background-color: #C11010;
     box-shadow: 1px 0px 20px #C11010;
     border-radius: 0 4px 4px 0;
 }
 
-.progress_barBlue::-webkit-progress-value {
+.progress-bar-blue::-webkit-progress-value {
     background-color: var(--primary-color);
     box-shadow: 1px 0px 20px var(--primary-color);
     border-radius: 0 4px 4px 0;
 }
 
-.progress_barYellow::-webkit-progress-value {
+.progress-bar-yellow::-webkit-progress-value {
     background-color: #E5B657;
     box-shadow: 1px 0px 20px #E5B657;
     border-radius: 0 4px 4px 0;
 }
 
-/*PARA SPANS*/
 .color-red{
     color: #C11010;
 }

@@ -10,7 +10,7 @@ const loadStudent = async () => {
   return data;
 };
 
-const criarCard = async () => {
+const createStudent = async () => {
   const studentData = await loadStudent();
 
   const article = document.querySelector("article");
@@ -25,4 +25,6 @@ const criarCard = async () => {
   article.append(img, name);
 };
 
-criarCard();
+createStudent();
+
+

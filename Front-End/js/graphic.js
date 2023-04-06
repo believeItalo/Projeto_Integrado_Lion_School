@@ -5,41 +5,41 @@ const graphicStudent = (dados) => {
 
   const contentBars = document.querySelector("#graphic-student");
 
-  const contentSpanValue = document.querySelector(".materiasSpan");
+  const contentSpanValue = document.querySelector(".disciplines-span");
 
-  const contentSpanDiscipline = document.querySelector(".spans_bar");
+  const contentSpanDiscipline = document.querySelector(".span-bar");
 
   for (let index = 0; index < dados.disciplinas.length; index++) {
-    console.log("alo");
 
-    const barra = document.createElement("progress");
-    barra.classList.add("progress_bar");
-    barra.value = dados.disciplinas[index].media;
-    barra.max = "100";
+
+    const bar = document.createElement("progress");
+    bar.classList.add("progress-bar");
+    bar.value = dados.disciplinas[index].media;
+    bar.max = "100";
 
     const span = document.createElement("span");
-    span.classList.add("spans_bar");
+    span.classList.add("span-bar");
     span.innerHTML = dados.disciplinas[index].media;
 
     const spanDisciplines = document.createElement("span");
-    // spanDisciplines.classList.add("bar_value");
     spanDisciplines.innerHTML = dados.disciplinas[index].nome;
 
-    if (barra.value > 50) {
-      barra.classList.add("progress_barBlue");
+
+    if (bar.value > 50) {
+      bar.classList.add("progress-bar-blue");
       span.classList.add("color-blue");
       spanDisciplines.classList.add("color-blue");
-    } else if (barra.value == 50) {
-      barra.classList.add("progress_barYellow");
+    } else if (bar.value == 50) {
+      bar.classList.add("progress-bar-yellow");
       span.classList.add("color-yellow");
       spanDisciplines.classList.add("color-yellow");
-    } else if (barra.value < 50) {
-      barra.classList.add("progress_barRed");
+    } else if (bar.value < 50) {
+      bar.classList.add("progress-bar-red");
       span.classList.add("color-red");
       spanDisciplines.classList.add("color-red");
     }
 
-    contentBars.append(barra);
+    contentBars.append(bar);
     contentSpanValue.append(span);
     contentSpanDiscipline.append(spanDisciplines);
   }
@@ -58,8 +58,11 @@ const loadDiscipline = async () => {
   let displines = data.curso;
 
   console.log(displines);
+  
 
   displines.map(graphicStudent);
 };
+
+
 
 loadDiscipline();

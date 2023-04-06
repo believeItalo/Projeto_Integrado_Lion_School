@@ -8,7 +8,7 @@ const nameCourse = async function () {
   titleCourse.innerHTML = title;
 };
 
-const criarCard = (student) => {
+const createCard = (student) => {
   nameCourse();
 
   const a = document.createElement("a");
@@ -40,19 +40,21 @@ const criarCard = (student) => {
   return a;
 };
 
-export const carregarAlunos = async () => {
+export const loadStudents = async () => {
   let localStore = localStorage.getItem("acronym");
   const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${localStore}`;
 
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+
   let list = data.curso;
 
   const container = document.getElementById("list-students");
-  const cards = list.map(criarCard);
+  const cards = list.map(createCard);
 
   container.replaceChildren(...cards);
 };
 
-carregarAlunos();
+loadStudents();
+
+// document.getElementById('')
