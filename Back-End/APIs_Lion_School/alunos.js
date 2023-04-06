@@ -707,6 +707,7 @@ const getAlunoPelaMatricula = (numeroMatricula) => {
             jsonAlunoMatricula.sexo = dados.sexo
             jsonAlunoMatricula.matricula = dados.matricula
             jsonAlunoMatricula.curso = dados.curso
+            jsonAlunoMatricula.siglaCurso = dados.curso
             status = true
         }
     })

@@ -37,8 +37,15 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 400ms ease-in-out;
 }
 
 .social a i{
     font-size: 1.5rem;
 }
+
+.social:hover {
+    transform: scale(1.1);
+ 
+}
+

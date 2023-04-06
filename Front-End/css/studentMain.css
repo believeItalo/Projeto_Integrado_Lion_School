@@ -1,4 +1,4 @@
-main {
+main{
     grid-area: main;
     padding: 100px 105px 60px 105px;
     display: flex;
@@ -7,16 +7,16 @@ main {
     gap: 49px;
 }
 
-main h3 {
+main h3{
     color: var(--primary-color);
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1.125rem;  
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 2px 8px #888888;
 }
 
-article {
+article{
     width: 500px;
     height: 500px;
     display: flex;
@@ -26,7 +26,12 @@ article {
     box-shadow: 1px 1px 12px #bebebe;
 }
 
-.grafic {
+.image-student-select{
+    width: 400px;
+    height: 400px;
+}
+
+.graphic {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,15 +42,16 @@ article {
     box-shadow: 1px 1px 12px #bebebe;
 }
 
-.grafic-student {
+#graphic-student {
     display: flex;
     flex-direction: column;
     align-items: center;
     rotate: -90deg;
     justify-content: center;
     gap: 40px;
+
 }
-.materiasSpan{
+.disciplines-span{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,39 +60,66 @@ article {
     gap: 20px;
     width: 355px;
 }
-.spans_bar {
+
+.span-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 18px;
     gap: 38px;
     width: 355px;
+    font-weight: 700;
+    text-shadow: 1px 2px 8px #888888
 }
 
-.progress_bar {
+.progress-bar {
     display: block;
     appearance: none;
     width: 300px;
+ 
 }
 
-.progress_barAzul {
-    display: block;
-    appearance: none;
+.progress-bar::-webkit-progress-bar {
+    background-color: #EEEFF8;;
 }
 
-.progress_bar::-webkit-progress-bar {
-    background-color: #bebebe;
+.progress-bar-red::-webkit-progress-value {
+    background-color: #C11010;
+    box-shadow: 1px 0px 20px #C11010;
+    border-radius: 0 4px 4px 0;
 }
 
-.progress_barRed::-webkit-progress-value {
-    background-color: red;
+.progress-bar-blue::-webkit-progress-value {
+    background-color: var(--primary-color);
+    box-shadow: 1px 0px 20px var(--primary-color);
+    border-radius: 0 4px 4px 0;
 }
 
-.progress_barBlue::-webkit-progress-value {
-    background-color: blue;
+.progress-bar-yellow::-webkit-progress-value {
+    background-color: #E5B657;
+    box-shadow: 1px 0px 20px #E5B657;
+    border-radius: 0 4px 4px 0;
 }
 
-.progress_barYellow::-webkit-progress-value {
-    background-color: yellow;
+.color-red{
+    color: #C11010;
 }
+
+.color-blue{
+    color: var(--primary-color);
+}
+
+.color-yellow{
+    color: #E5B657;
+}
+
+/* .teste-grafico{
+    display: flex;
+    height: auto;
+    gap: 16px;
+}
+
+.rotate{
+    rotate: 90deg;
+} */

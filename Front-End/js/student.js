@@ -1,33 +1,30 @@
-'use strict'
+"use strict";
 
-const url = `http://localhost:8080/v1/lion-school/alunos`
+const loadStudent = async () => {
+  let localStore = localStorage.getItem("registration");
+  const url = `http://localhost:8080/v1/lion-school/alunos/${localStore}`;
 
-const response = await fetch(url)
-const data = await response.json()
-let teste = data.alunos
+  const response = await fetch(url);
+  const data = await response.json();
 
-console.log();
+  return data;
+};
+
+const createStudent = async () => {
+  const studentData = await loadStudent();
+
+  const article = document.querySelector("article");
+
+  const img = document.createElement("img");
+  img.classList.add("image-student-select");
+  img.src = studentData.foto;
+
+  const name = document.createElement("h3");
+  name.textContent = studentData.nome;
+
+  article.append(img, name);
+};
+
+createStudent();
 
 
-const barraProgresso = () => {
-    let barra = document.querySelectorAll('.progress_bar')
-    let bar_value = document.querySelectorAll('.bar_value')
-    let bar_grades = document.querySelectorAll('.materiasSpan')
-    barra.forEach(function (dados){
-        if (dados.value > 50) {
-            dados.classList.add('progress_barBlue')
-        }
-        else if (dados.value == 50){
-            dados.classList.add('progress_barYellow')
-        }
-        else if(dados.value < 50){
-            dados.classList.add('progress_barRed')
-        }
-
-
-    })
-    
- 
-}
-
-barraProgresso()
