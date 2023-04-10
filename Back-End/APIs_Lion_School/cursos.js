@@ -24,9 +24,6 @@ var cursos = [
 const getCursos = () => {
     return { cursos }
 }
-
-
-
 module.exports = {
     getCursos
 }

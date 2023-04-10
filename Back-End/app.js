@@ -38,10 +38,42 @@ app.get('/v1/lion-school/cursos', cors(), async function (request, response, nex
 
 app.get('/v1/lion-school/alunos', cors(), async function (request, response, next) {
 
-    let listaAlunos = alunosLionSchool.getAlunos()
+    let statusDoAluno = request.query.status
+    let cursoDoAluno = request.query.siglaCurso
+    let anoDoAluno = request.query.anoDeConclusao
+    let listaAlunos
+    let status
+    if (statusDoAluno == undefined && cursoDoAluno == undefined && anoDoAluno == undefined) {
+        listaAlunos = alunosLionSchool.getAlunos()
+        status = true
+    }
+    else if (statusDoAluno != undefined) {
+        listaAlunos = alunosLionSchool.getAlunosStatus(statusDoAluno)
+        status = true
+    }
+    else if(anoDoAluno != undefined){
+        listaAlunos = alunosLionSchool.getAlunoPeloAno(anoDoAluno)
+        status = true
+    }
+    else {
+        listaAlunos = alunosLionSchool.getAlunosCurso(cursoDoAluno)
+        if (listaAlunos == true) {
+            listaAlunos
+            status = true
+        }
+    }
+    if(listaAlunos == false){
+        response.status(404)
+        response.json('erro')
+        
+    }
+    else{
+        response.json(listaAlunos)
+        response.status(200)
+    }
+  
+    
 
-    response.json(listaAlunos)
-    response.status(200)
 })
 
 app.get('/v1/lion-school/alunos/:matricula', cors(), async function (request, response, next) {
