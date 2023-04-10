@@ -763,6 +763,7 @@ const getAlunosStatus = (status) => {
     }
     else return statusTF
 
+
 }
 const getAlunoPeloAno = (ano) => {
     let json = {}
