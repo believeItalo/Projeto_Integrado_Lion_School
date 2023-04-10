@@ -11,6 +11,14 @@ header i {
 .name-school{
     display: flex;
     flex-direction: column;
+    cursor: default;
+    transition: all 400ms ease-in-out;
+}
+
+.name-school:hover{
+    text-shadow: 1px 1px 10px #fff;
+    transform: scale(1.1);
+
 }
 
 .logo span{
@@ -27,4 +35,33 @@ header i {
 .out__text{
     font-size: 2rem;
     font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    header{
+        padding: 13px 20px
+    }
+
+  .out__text{
+    display: none;
+  }
+
+  .out a i{
+    font-size: 2rem;
+  }
+
+  .title h1{
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 489px) {
+    header{
+        padding: 13px 20px;
+    }
+    
+    .name-school {
+        display: none;
+    }
 }

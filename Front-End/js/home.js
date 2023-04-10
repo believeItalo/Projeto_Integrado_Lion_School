@@ -1,6 +1,13 @@
 "use strict";
 
+const out = document.querySelector('.out')
+
+out.addEventListener('click', () =>{
+  window.close()
+})
+
 const createButtonCourse = (curso) => {
+  window.open
   const a = document.createElement("a");
   a.href = "class.html";
 

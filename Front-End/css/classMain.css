@@ -3,8 +3,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
-  overflow: auto;
+  min-height: 75vh;
+
 }
 
 main h1 {
@@ -115,17 +115,107 @@ main h3 {
 
 option {
   background-color: var(--primary-color);
+  color: #FFF;
 }
 
 select {
   background-color: var(--filter-color);
   border: none;
+  border-bottom: 3px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+  appearance: none;
   color: var(--primary-color);
   font-size: 1rem;
   font-weight: 500;
+  padding: 8px 30px 4px 8px;
+  cursor: pointer;
+
+}
+
+#select {
+  display: flex;
+  gap: 13px;
 }
 
 .image-student {
   width: 200px;
   height: 200px;
+}
+
+@media (max-width: 1480px) {
+  body {
+    grid-template-rows: 10vh auto 20vh;
+  }
+}
+
+@media (max-width: 1030px) {
+  body {
+    grid-template-rows: 10vh auto 20vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .title-class {
+    font-size: 3rem;
+  }
+
+  body {
+    grid-template-rows: 10vh auto auto;
+  }
+
+  .filters {
+    height: auto;
+    padding: 11px 96px;
+  }
+
+  #select {
+    flex-direction: column;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content-finalized {
+    place-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    gap: 30px;
+  }
+
+  .filters {
+    padding: 13px 20px;
+  }
+
+  .title-class {
+    padding: 20px;
+    font-size: 2.5rem;
+  }
+
+  #list-students {
+    padding: 0px 96px 114px 96px;
+  }
+
+}
+
+@media (max-width: 410px) {
+  #list-students {
+    padding: 0px 20px 114px 20px;
+  }
+}
+
+@media (max-width: 366px) {
+  select {
+    padding: 8px 0px 4px 8px;
+  }
+
+  .title-class {
+    padding: 5px;
+    font-size: 1.9rem;
+  }
 }

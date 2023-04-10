@@ -5,6 +5,7 @@ body{
     "main"
     "footer";
     grid-template-rows: 10vh 75vh 15vh;
+    color: #FFF;
 }
 
 header{

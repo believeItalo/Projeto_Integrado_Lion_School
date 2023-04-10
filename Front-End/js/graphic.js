@@ -8,14 +8,14 @@ const graphicStudent = (dados) => {
   for (let index = 0; index < dados.disciplinas.length; index++) {
 
     const contentBars = document.createElement('div')
-    contentBars.classList.add('teste-grafico')
+    contentBars.classList.add('content-elements-graphic')
 
     const bar = document.createElement("progress");
     bar.classList.add("progress-bar");
     bar.value = dados.disciplinas[index].media;
     bar.max = "100";
 
-    const span = document.createElement("span");
+    const span = document.createElement("span");  
     span.classList.add("span-bar");
     span.classList.add("rotate");
     span.innerHTML = dados.disciplinas[index].media;
