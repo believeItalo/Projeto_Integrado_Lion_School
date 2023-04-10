@@ -40,7 +40,7 @@ Segue o link:
 O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. 
 Nossa documentação: 
 
-- [Link do POSTMAN]()
+- [Link do POSTMAN](https://documenter.getpostman.com/view/23640169/2s93XsZmxt)
 
 ## **Critérios** 
 - [x] Criou layout conforme designer feito no Figma?
