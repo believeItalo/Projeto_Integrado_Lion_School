@@ -130,3 +130,14 @@ article:hover{
 .rotate{
     rotate: 90deg;
 }
+
+
+@media (max-width: 1410px) {
+    body{
+        grid-template-rows: 10vh auto 15vh;
+    }
+
+    main{
+        flex-direction: column;
+    }
+  }
