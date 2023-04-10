@@ -63,10 +63,27 @@ const select = document.getElementById('select-status')
 select.addEventListener('change', async function () {
 
   if(select.value == 'finalized'){
-    alert('camila linda')
+    alert('')
   }
   
 })
+
+// const clearCards = () => {
+//   const cards = document.querySelectorAll(`.student`)
+//   cards.forEach((card) => card.remove())
+// }
+
+// const statusSelect = document.getElementById(`select`)
+// statusSelect.addEventListener(`change`, async (el) => {
+//   const status = statusSelect.value
+//   const studentsFilter = await getStudentsByFilter(courseInitial, status.toLowerCase())
+
+//   if (status == `status`) {
+//       location.reload()
+//   }
+//   clearCards()
+//   createCardStudent(studentsFilter)
+// })
 
 
   
