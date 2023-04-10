@@ -1,4 +1,4 @@
-main{
+main {
     grid-area: main;
     padding: 98px 96px;
     display: grid;
@@ -6,40 +6,41 @@ main{
     grid-template-columns: 40% 20% 40%;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-     "title image2 card"
-     "image1 image2 card";
-     justify-content: space-between;
+        "title image2 card"
+        "image1 image2 card";
+    justify-content: space-between;
+
 }
 
-.title{
+.title {
     max-width: 500px;
     grid-area: title;
     place-self: start start;
 }
 
-.title h1{
+.title h1 {
     color: #353535;
     font-size: 3.9rem;
     font-weight: 300;
 }
 
-h1 span{
+h1 span {
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.devices-image{
+.devices-image {
     grid-area: image1;
     place-self: center start;
 }
 
-.student-image{
+.student-image {
     grid-area: image2;
     place-self: center center;
 }
 
 
-#buttons-options{
+#buttons-options {
     grid-area: card;
     place-self: start end;
     display: flex;
@@ -48,7 +49,7 @@ h1 span{
     gap: 50px;
 }
 
-button{
+button {
     width: 24vw;
     height: 238px;
     background-color: var(--primary-color);
@@ -61,43 +62,167 @@ button:hover {
     transform: scale(1.1);
 }
 
-.class{
+.class {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
     box-shadow: 10px 10px 3px var(--filter-color);
+    color: #FFF;
 }
 
-.class i{
+.class i {
     font-size: 4rem;
 }
 
-.name-class{
+.name-class {
     font-size: 4rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.image-icon{
+.image-icon {
     width: 90px;
     height: 90px;
     filter: brightness(0) invert(1);
 }
 
-@media (max-width: 1395px){
+@media (max-width: 1395px) {
     main {
         grid-template-columns: 35% 25% 40%;
     }
-    
-    .title h1{
+
+    .title h1 {
         font-size: 3rem;
         font-weight: 300;
     }
 
-    .devices-image{
+    .devices-image {
         width: 23vw;
     }
 
+}
 
+
+
+@media (max-width: 1130px) {
+    body {
+        grid-template-rows: 10vh 75vh 20vh;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "contact social"
+            "copy copy";
+    }
+
+    .contact-container {
+        grid-area: contact;
+    }
+
+    footer p {
+        grid-area: copy;
+    }
+
+    .social-container {
+        grid-area: social
+    }
+}
+
+@media (max-width: 1030px) {
+    body {
+        grid-template-rows: 10vh 75vh 20vh;
+    }
+
+    main {
+        grid-template-areas:
+            "title card"
+            "image2 card";
+        grid-template-columns: 50% 50%;
+    }
+
+    .devices-image {
+        display: none;
+    }
+
+    button {
+        width: 35vw;
+    }
+
+    .student-image {
+        height: 35vh;
+    }
+
+}
+
+@media (max-width: 968px) {
+    .student-image {
+        place-self: start;
+    }
+}
+
+@media (max-width: 760px) {
+
+    body {
+        grid-template-rows: 10vh 75vh auto;
+    }
+}
+@media (max-width: 740px) {
+    body {
+        grid-template-rows: 10vh auto auto;
+    }
+    main {
+        grid-template-areas:
+            "title "
+            "card";
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    button{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .title h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        padding: 98px 70px
+    }
+}
+
+@media (max-width: 489px) {
+    button {
+        height: 165px;
+        width: 80vw;
+    }
+
+    main {
+        padding: 98px 10px;
+    }
+
+    .name-class {
+        font-size: 3.3rem;
+    }
+
+    .image-icon {
+        height: 60px;
+        width: 60px;
+    }
+
+}
+
+@media (max-width: 355px) {
+    .title h1{
+        font-size: 2.2rem;
+    }
 }

@@ -1,51 +1,184 @@
-.contact-container{
+.contact-container {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.contact-item i{
+.contact-item i {
     font-size: 1.5rem;
     width: 24px;
 }
 
-.contact-item span{
+.contact-item span {
     padding-left: 24px;
 }
 
-.contact-item__text{
+.contact-item__text {
     font-size: 1rem;
 }
 
-footer p{
+.contact-item {
+    transition: all 400ms ease-in-out;
+    cursor: default;
+}
+
+.contact-item:hover {
+    transform: scale(1.2);
+}
+
+footer p {
     font-size: 1.25rem;
     font-weight: 400;
 }
 
-.social-container{
+.social-container {
     display: flex;
     align-items: center;
     height: auto;
 }
 
-.social{
+.social {
     margin: 10px;
-    height: 48px;
-    width: 48px;
+    height: 58px;
+    width: 58px;
     border-radius: 200px;
     border: 2px solid #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 400ms ease-in-out;
+    cursor: pointer;
+
 }
 
-.social a i{
+.social a i {
     font-size: 1.5rem;
 }
 
 .social:hover {
-    transform: scale(1.1);
- 
+    background-color: #FFFFFF;
+    color: #3347B0;
+    transform: scale(1.2);
 }
 
+.social a i:hover {
+    color: #3347B0;
+}
+
+@media (max-width: 1172px) {
+    footer p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 830px) {
+    .social {
+        height: 50px;
+        width: 50px;
+    }
+
+    footer p {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (max-width: 1172px) {
+    footer p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1130px) {
+    footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "contact social"
+            "copy copy";
+    }
+
+    .contact-container {
+        grid-area: contact;
+    }
+
+    footer p {
+        grid-area: copy;
+    }
+
+    .social-container {
+        grid-area: social
+    }
+}
+
+
+@media (max-width: 760px) {
+    footer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "contact"
+            "social "
+            "copy";
+        place-content: center;
+        gap: 40px;
+        padding-top: 85px;
+    }
+
+    .contact-container {
+        align-items: center;
+    }
+
+    .social-container {
+        place-self: center;
+    }
+}
+
+@media (max-width: 740px) {
+   
+    #buttons-options{
+        place-self: center;
+    }
+
+    .student-image {
+        display: none;
+    }
+
+    .title{
+        place-self: center;
+    }
+
+    .title h1{
+         text-align: center;
+    }
+}
+
+@media (max-width: 489px) {
+    footer {
+      padding: 85px 10px 13px 10px;
+    }
+}
+
+@media (max-width: 355px) {
+    footer{
+        padding: 30px;
+    }
+
+    .contact-item i{
+        font-size: 1.3rem;
+    }
+
+    .contact-item span{
+        padding-left: 10px;
+    }
+
+    .contact-item__text {
+        font-size: 0.9rem;
+    }
+
+    .social-container{
+        flex-direction: column;
+    }
+
+}

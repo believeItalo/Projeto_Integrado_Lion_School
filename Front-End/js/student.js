@@ -27,4 +27,8 @@ const createStudent = async () => {
 
 createStudent();
 
+let select = document.getElementById('select-status')
+
+
+
 

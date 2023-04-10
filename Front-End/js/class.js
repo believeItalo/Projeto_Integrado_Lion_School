@@ -57,4 +57,20 @@ export const loadStudents = async () => {
 
 loadStudents();
 
-// document.getElementById('')
+
+
+const select = document.getElementById('select-status')
+select.addEventListener('change', async function () {
+
+  if(select.value == 'finalized'){
+    alert('camila linda')
+  }
+  
+})
+
+
+  
+
+
+
+
