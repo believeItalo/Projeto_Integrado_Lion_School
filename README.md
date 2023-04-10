@@ -36,6 +36,12 @@ Segue o link:
 
 - [Link do Figma](https://www.figma.com/file/zecahYY0iLXROChUJgE7iI/PROJETO-INTEGRADO---LION-SCHOOL?node-id=0-1&t=3UjtougSLWNMPcEP-0)
 
+## **Documentação POSTMAN**
+O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. 
+Nossa documentação: 
+
+- [Link do POSTMAN](https://documenter.getpostman.com/view/23640169/2s93XsZmxt)
+
 ## **Critérios** 
 - [x] Criou layout conforme designer feito no Figma?
 - [x] Os botões dos cursos são dinâmicos?

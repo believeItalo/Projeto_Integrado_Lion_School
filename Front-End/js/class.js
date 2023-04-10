@@ -37,6 +37,26 @@ const createCard = (student) => {
   a.append(card);
   card.append(img, name);
 
+  const select = document.getElementById('select-status')
+
+  select.addEventListener('change', function () {
+    let value = select.value
+
+    console.log(value)
+
+    if (value == 'status') {
+        card.style.display = 'flex'
+
+    } else if (value != student.status) {
+        card.style.display = 'none'
+        
+    } else if (value == student.status) {
+        card.style.display = 'flex'      
+    }
+    
+    
+})
+
   return a;
 };
 
@@ -59,14 +79,9 @@ loadStudents();
 
 
 
-const select = document.getElementById('select-status')
-select.addEventListener('change', async function () {
 
-  if(select.value == 'finalized'){
-    alert('')
-  }
   
-})
+
 
 // const clearCards = () => {
 //   const cards = document.querySelectorAll(`.student`)
