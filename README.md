@@ -36,7 +36,7 @@ Segue o link:
 
 - [Link do Figma](https://www.figma.com/file/zecahYY0iLXROChUJgE7iI/PROJETO-INTEGRADO---LION-SCHOOL?node-id=0-1&t=3UjtougSLWNMPcEP-0)
 
-## **Documententação POSTMAN**
+## **Documentação POSTMAN**
 O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. 
 Nossa documentação: 
 
