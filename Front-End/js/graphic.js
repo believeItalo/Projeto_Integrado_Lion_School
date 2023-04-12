@@ -69,7 +69,7 @@ const graphicStudent = (dados) => {
 };
 const loadDiscipline = async () => {
   let localStore = localStorage.getItem("registration");
-  const url = `http://localhost:8080/v1/lion-school/alunos/${localStore}`;
+  const url = `https://api-lionschool.cyclic.app/v1/lion-school/alunos/${localStore}`;
 
   const response = await fetch(url);
   const data = await response.json();

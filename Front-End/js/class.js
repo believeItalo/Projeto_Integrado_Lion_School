@@ -62,7 +62,7 @@ const createCard = (student) => {
 
 export const loadStudents = async () => {
   let localStore = localStorage.getItem("acronym");
-  const url = `http://localhost:8080/v1/lion-school/alunos/cursos/${localStore}`;
+  const url = `https://api-lionschool.cyclic.app/v1/lion-school/alunos/cursos/${localStore}`;
 
   const response = await fetch(url);
   const data = await response.json();
