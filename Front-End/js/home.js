@@ -1,10 +1,17 @@
 "use strict";
 
-const out = document.querySelector('.out')
+const out = document.querySelector('#out')
 
-out.addEventListener('click', () =>{
-  window.close()
+out.addEventListener('click', () => {
+  closeApplication()
 })
+
+function closeApplication() {
+  const new_window =
+    open(location, '_self');
+  new_window.close();
+  return false;
+}
 
 const createButtonCourse = (curso) => {
   window.open

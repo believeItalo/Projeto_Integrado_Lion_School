@@ -26,10 +26,11 @@ header i {
     font-weight: 700;
 }
 
-.out a{
+.out {
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .out__text{
@@ -46,7 +47,7 @@ header i {
     display: none;
   }
 
-  .out a i{
+  .out i{
     font-size: 2rem;
   }
 
