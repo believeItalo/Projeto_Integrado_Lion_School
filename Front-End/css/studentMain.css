@@ -141,3 +141,10 @@ article:hover{
         flex-direction: column;
     }
   }
+
+@media (max-width: 750px) {
+    .graphic{
+        rotate: 190deg;
+        background-color: #C11010;
+    }
+  }
