@@ -8,7 +8,7 @@
 |![](./Front-End/img/screenshot-mobile.png)|![](./Front-End/img/screenshot-desktop.png)|
 
 
-[Clique aqui]() para acessar o site. 
+[Clique aqui](https://camilapinh3iro.github.io/Projeto_Integrado_Lion_School/Front-End/home.html) para acessar o site. 
 
 ## **Escopo**
 
