@@ -35,7 +35,7 @@ const createButtonCourse = (curso) => {
 };
 
 const loadCourses = async () => {
-  const url = `http://localhost:8080/v1/lion-school/cursos`;
+  const url = `https://api-lionschool.cyclic.app/v1/lion-school/cursos`;
 
   const response = await fetch(url);
   const data = await response.json();
