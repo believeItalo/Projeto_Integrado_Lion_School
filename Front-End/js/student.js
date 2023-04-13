@@ -18,6 +18,7 @@ const createStudent = async () => {
   const img = document.createElement("img");
   img.classList.add("image-student-select");
   img.src = studentData.foto;
+  img.alt = "Student photo";
 
   const name = document.createElement("h3");
   name.textContent = studentData.nome;
