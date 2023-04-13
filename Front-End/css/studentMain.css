@@ -1,23 +1,22 @@
-main{
+main {
     grid-area: main;
     padding: 100px 105px 60px 105px;
     display: flex;
     align-items: center;
-    justify-content: space-around; 
-
+    justify-content: space-around;
 }
 
-main h3{
+main h3 {
     color: var(--primary-color);
     text-transform: uppercase;
-    font-size: 1.125rem;  
+    font-size: 1.125rem;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 2px 8px #888888;
     text-align: center;
 }
 
-article{
+article {
     width: 500px;
     height: 500px;
     display: flex;
@@ -28,11 +27,11 @@ article{
     transition: all 400ms ease-in-out;
 }
 
-article:hover{
+article:hover {
     transform: scale(1.05);
 }
 
-.image-student-select{
+.image-student-select {
     width: 400px;
     height: 400px;
 }
@@ -45,7 +44,7 @@ article:hover{
     height: auto;
     box-shadow: 1px 1px 12px #bebebe;
     padding: 71px;
-    rotate: -90deg; 
+    rotate: -90deg;
     transition: all 400ms ease-in-out;
 }
 
@@ -58,10 +57,9 @@ article:hover{
     flex-direction: column;
     justify-content: center;
     gap: 40px;
-   
 }
 
-.disciplines-span{
+.disciplines-span {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,11 +81,11 @@ article:hover{
     display: block;
     appearance: none;
     width: 300px;
-
 }
 
 .progress-bar::-webkit-progress-bar {
-    background-color: #EEEFF8;;
+    background-color: #EEEFF8;
+    ;
 }
 
 .progress-bar-red::-webkit-progress-value {
@@ -108,110 +106,102 @@ article:hover{
     border-radius: 0 4px 4px 0;
 }
 
-.color-red{
+.color-red {
     color: #C11010;
 }
 
-.color-blue{
+.color-blue {
     color: var(--primary-color);
 }
 
-.color-yellow{
+.color-yellow {
     color: #E5B657;
 }
 
-.content-elements-graphic{
+.content-elements-graphic {
     display: flex;
     align-items: center;
     height: auto;
     gap: 16px;
 }
 
-.rotate{
+.rotate {
     rotate: 90deg;
 }
 
-
 @media (max-width: 1410px) {
-    body{
+    body {
         grid-template-rows: 10vh auto 20vh;
     }
-
-    main{
+    main {
         flex-direction: column;
         gap: 50px;
     }
-  }
+}
 
 @media (max-width: 760px) {
     body {
         grid-template-rows: 10vh auto auto;
-      }
-
-    main{
-        padding: 100px 30px 60px 30px;
-        
     }
-
-    .graphic{
+    main {
+        padding: 100px 30px 60px 30px;
+    }
+    .graphic {
         rotate: -180deg;
     }
-
-    .rotate{
+    .rotate {
         rotate: 180deg;
     }
-  }
+}
 
-  @media (max-width: 600px) {
-    main{
+@media (max-width: 600px) {
+    main {
         padding: 100px 15px 60px 15px;
     }
-   article{
-    width: 70vw;
-    height: 50vh;
-   }
+    article {
+        width: 70vw;
+        height: 50vh;
+    }
+    .graphic {
+        width: 80vw;
+        height: auto;
+    }
+    #graphic-student {
+        gap: 15px;
+        padding-left: 15px;
+    }
+    .content-elements-graphic {
+        gap: 10px;
+    }
+    .progress-bar {
+        width: 40vw;
+    }
+    .image-student-select {
+        width: 300px;
+        height: 300px;
+    }
+}
 
-   .graphic{
-    width: 80vw;
-    height: auto;
-    
-   }
-
-   #graphic-student{
-    gap: 15px;
-    padding-left: 15px;
-   }
-
-   .content-elements-graphic{
-    gap: 10px;
-   }
-
-   .progress-bar{
-    width: 40vw;
-   }
-
-   .image-student-select{
-       width: 300px;
-       height: 300px;
-
-   }
-  }
-
-  @media (max-width: 425px) {
-    main{
+@media (max-width: 425px) {
+    main {
         padding: 60px 5px 60px 5px;
     }
-    article{
+    article {
         width: 75vw;
         height: 40vh;
     }
-    .graphic{
+    .graphic {
         padding: 50px 30px;
     }
-
-    .image-student-select{
+    .image-student-select {
         width: 250px;
         height: 250px;
     }
+}
 
-  }
+@media (max-width: 315px) {
+    .image-student-select {
+        width: 200px;
+        height: 200px;
+    }
+}
