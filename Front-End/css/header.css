@@ -61,6 +61,15 @@ header i {
     font-size: 2rem;
   }
 
+  .logo img{
+      height: 70px;
+      width: 55px;
+  }
+
+  .back a i {
+      font-size: 1.8rem;
+  }
+
 }
 
 @media (max-width: 489px) {
