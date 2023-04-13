@@ -28,7 +28,7 @@ main h2 {
   padding: 49px 96px 114px 96px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
 }
