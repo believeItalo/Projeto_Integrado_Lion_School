@@ -83,8 +83,7 @@ article:hover{
     display: block;
     appearance: none;
     width: 300px;
-    
- 
+
 }
 
 .progress-bar::-webkit-progress-bar {
@@ -200,7 +199,7 @@ article:hover{
 
   @media (max-width: 425px) {
     main{
-        padding: 100px 5px 60px 5px;
+        padding: 60px 5px 60px 5px;
     }
     article{
         width: 75vw;
