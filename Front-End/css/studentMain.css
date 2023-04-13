@@ -14,6 +14,7 @@ main h3{
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 2px 8px #888888;
+    text-align: center;
 }
 
 article{
@@ -134,7 +135,7 @@ article:hover{
 
 @media (max-width: 1410px) {
     body{
-        grid-template-rows: 10vh auto 15vh;
+        grid-template-rows: 10vh auto 20vh;
     }
 
     main{
@@ -143,7 +144,11 @@ article:hover{
     }
   }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
+    body {
+        grid-template-rows: 10vh auto auto;
+      }
+
     main{
         padding: 100px 30px 60px 30px;
         
@@ -185,6 +190,12 @@ article:hover{
    .progress-bar{
     width: 40vw;
    }
+
+   .image-student-select{
+       width: 300px;
+       height: 300px;
+
+   }
   }
 
   @media (max-width: 425px) {
@@ -200,8 +211,8 @@ article:hover{
     }
 
     .image-student-select{
-        width: 30vw;
-        height: 40vh;
+        width: 250px;
+        height: 250px;
     }
 
   }
