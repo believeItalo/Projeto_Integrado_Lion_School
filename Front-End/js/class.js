@@ -30,8 +30,9 @@ const createCard = (student) => {
   const img = document.createElement("img");
   img.classList.add("image-student");
   img.src = student.foto;
+  img.alt = "Student photo";
 
-  const name = document.createElement("h3");
+  const name = document.createElement("h2");
   name.textContent = student.nome;
 
   a.append(card);

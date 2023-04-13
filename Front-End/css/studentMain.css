@@ -139,12 +139,69 @@ article:hover{
 
     main{
         flex-direction: column;
+        gap: 50px;
     }
   }
 
 @media (max-width: 750px) {
-    .graphic{
-        rotate: 190deg;
-        background-color: #C11010;
+    main{
+        padding: 100px 30px 60px 30px;
+        
     }
+
+    .graphic{
+        rotate: -180deg;
+    }
+
+    .rotate{
+        rotate: 180deg;
+    }
+  }
+
+  @media (max-width: 600px) {
+    main{
+        padding: 100px 15px 60px 15px;
+    }
+   article{
+    width: 70vw;
+    height: 50vh;
+   }
+
+   .graphic{
+    width: 80vw;
+    height: auto;
+    
+   }
+
+   #graphic-student{
+    gap: 15px;
+    padding-left: 15px;
+   }
+
+   .content-elements-graphic{
+    gap: 10px;
+   }
+
+   .progress-bar{
+    width: 40vw;
+   }
+  }
+
+  @media (max-width: 425px) {
+    main{
+        padding: 100px 5px 60px 5px;
+    }
+    article{
+        width: 75vw;
+        height: 40vh;
+    }
+    .graphic{
+        padding: 50px 30px;
+    }
+
+    .image-student-select{
+        width: 30vw;
+        height: 40vh;
+    }
+
   }
