@@ -5,22 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Site dedicado ao gerenciamento do sistema escolar da Lion School." />
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/colors.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/homeMain.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="shortcut icon" type="imagem/x-icon" href="./img/logo-image.png" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/colors.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/studentMain.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="shortcut icon" type="imagem/x-icon" href="../img/logo-image.png" />
 
-  <script src="./js/home.js" defer type="module"></script>
+  <script src="../js/student.js" defer type="module"></script>
+  <script src="../js/graphic.js" defer type="module"></script>
   <script src="https://kit.fontawesome.com/56adc94ecd.js" crossorigin="anonymous"></script>
 
   <title>Lion School</title>
@@ -29,33 +30,33 @@
 <body>
   <header>
     <div class="logo">
-      <img src="./img/logo-image.png" alt="Logo Lion School" />
+      <img src="../img/logo-image.png" alt="Logo Lion School" />
       <div class="name-school">
         <span>Lion</span>
         <span>School</span>
       </div>
     </div>
 
-    <div class="out" id="out">
-        <i class="fas fa-sign-out-alt" aria-label="Leave page"></i>
-        <span class="out__text">Sair</span>
+    <div class="back">
+      <a href="./class.html">
+        <i class="fas fa-sign-out-alt" aria-label="Back to previous page"></i>
+        <span class="out__text">Voltar</span>
+      </a>
     </div>
   </header>
-  <main>
-    <div class="title">
-      <h1>
-        Escolha um
-        <span>curso</span>
-        para gerenciar
-      </h1>
-    </div>
 
-    <img class="devices-image" src="./img/devices.png" alt="Devices" />
-    <img class="student-image" src="./img/studant.png" alt="Student" />
+  <main id="main">
+    <article id="student-select">
+    </article>
 
-    <div id="buttons-options">
+    <div class="graphic">
+
+      <div id="graphic-student">
+      </div>
+
     </div>
   </main>
+
   <footer>
     <ul class="contact-container">
       <li>

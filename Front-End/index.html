@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Site dedicado ao gerenciamento do sistema escolar da Lion School." />
-
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,12 +16,11 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/colors.css" />
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/studentMain.css" />
+  <link rel="stylesheet" href="./css/indexMain.css" />
   <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="shortcut icon" type="imagem/x-icon" href="./img/logo-image.png" />
+  <link rel="shortcut icon" type="imagem/x-icon" href="../img/logo-image.png" />
 
-  <script src="./js/student.js" defer type="module"></script>
-  <script src="./js/graphic.js" defer type="module"></script>
+  <script src="./js/index.js" defer type="module"></script>
   <script src="https://kit.fontawesome.com/56adc94ecd.js" crossorigin="anonymous"></script>
 
   <title>Lion School</title>
@@ -37,26 +36,26 @@
       </div>
     </div>
 
-    <div class="back">
-      <a href="./class.html">
-        <i class="fas fa-sign-out-alt" aria-label="Back to previous page"></i>
-        <span class="out__text">Voltar</span>
-      </a>
+    <div class="out" id="out">
+        <i class="fas fa-sign-out-alt" aria-label="Leave page"></i>
+        <span class="out__text">Sair</span>
     </div>
   </header>
+  <main>
+    <div class="title">
+      <h1>
+        Escolha um
+        <span>curso</span>
+        para gerenciar
+      </h1>
+    </div>
 
-  <main id="main">
-    <article id="student-select">
-    </article>
+    <img class="devices-image" src="./img/devices.png" alt="Devices" />
+    <img class="student-image" src="./img/studant.png" alt="Student" />
 
-    <div class="graphic">
-
-      <div id="graphic-student">
-      </div>
-
+    <div id="buttons-options">
     </div>
   </main>
-
   <footer>
     <ul class="contact-container">
       <li>

@@ -16,7 +16,7 @@ function closeApplication() {
 const createButtonCourse = (curso) => {
   window.open
   const a = document.createElement("a");
-  a.href = "class.html";
+  a.href = "./html/class.html";
 
   const card = document.createElement("button");
   card.classList.add("class");
