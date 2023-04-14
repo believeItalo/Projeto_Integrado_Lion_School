@@ -8,7 +8,7 @@
 |![](./Front-End/img/screenshot-mobile.png)|![](./Front-End/img/screenshot-desktop.png)|
 
 
-[Clique aqui](https://camilapinh3iro.github.io/Projeto_Integrado_Lion_School/Front-End/home.html) para acessar o site. 
+[Clique aqui](https://camilapinh3iro.github.io/Projeto_Integrado_Lion_School/Front-End/index.html) para acessar o site. 
 
 ## **Escopo**
 
@@ -47,7 +47,7 @@ Nossa documentação:
 - [x] Os botões dos cursos são dinâmicos?
 - [x] Os cards são criados dinamicamente?
 - [x] A página com informações dos cursos foi criada dinamicamente?
-- [ ] O filtro por status está funcional?
+- [x] O filtro por status está funcional?
 - [x] Os nomes das variáveis, funções e arquivos tem valor semântico?
 - [x] A maioria das funções seguem as boas práticas como responsabilidade única?
 - [x] Foi criado o layout responsivo no Figma?

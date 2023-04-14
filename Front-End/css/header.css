@@ -2,26 +2,26 @@ header i {
     font-size: 1.5rem;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.name-school{
+.name-school {
     display: flex;
     flex-direction: column;
     cursor: default;
     transition: all 400ms ease-in-out;
 }
 
-.name-school:hover{
+.name-school:hover {
     text-shadow: 1px 1px 10px #fff;
     transform: scale(1.1);
 
 }
 
-.logo span{
+.logo span {
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -33,50 +33,50 @@ header i {
     cursor: pointer;
 }
 
-.back a{
+.back a {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.out__text{
+.out__text {
     font-size: 2rem;
     font-weight: 500;
 }
 
-@media (max-width: 600px) {
-    header{
-        padding: 13px 20px
+@media (max-width: 725px) {
+    header {
+        padding: 13px 20px;
     }
 
-  .out__text{
-    display: none;
-  }
+    .out__text {
+        display: none;
+    }
 
-  .out i{
-    font-size: 2rem;
-  }
+    .out i {
+        font-size: 2rem;
+    }
 
-  .title h1{
-    font-size: 2rem;
-  }
+    .title h1 {
+        font-size: 2rem;
+    }
 
-  .logo img{
-      height: 70px;
-      width: 55px;
-  }
+    .logo img {
+        height: 55px;
+        width: 44px;
+    }
 
-  .back a i {
-      font-size: 1.8rem;
-  }
+    .back a i {
+        font-size: 1.85rem;
+    }
 
 }
 
 @media (max-width: 489px) {
-    header{
+    header {
         padding: 13px 20px;
     }
-    
+
     .name-school {
         display: none;
     }
